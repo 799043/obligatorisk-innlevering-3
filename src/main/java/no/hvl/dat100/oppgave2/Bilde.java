@@ -6,7 +6,10 @@ public class Bilde extends Tekst {
 
 	// TODO - objekt variable
 	private String url;
-	private String klasse = "BILDE";
+	
+	public Bilde() {
+		super();
+	}
 	
 	public Bilde(int id, String bruker, String dato, String tekst, String url) {
 		super(id, bruker, dato, tekst);
@@ -25,9 +28,10 @@ public class Bilde extends Tekst {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-
+	
 	@Override
 	public String toString() { 
+		type = "BILDE";
 		return super.toString() + url + "\n";
 	}
 

@@ -7,7 +7,7 @@ public class Tekst extends Innlegg {
 
 	// TODO: objektvariable 
 	private String tekst;
-	public String klasse = "TEKST";
+	protected String type = "TEKST";
 	
 	public Tekst () {
 		
@@ -30,10 +30,18 @@ public class Tekst extends Innlegg {
 	public void setTekst(String tekst) {
 		this.tekst = tekst;
 	}
+	
+	public String getType() {
+		return type;
+	}
+	
+	public void setType(String type) {
+		this.type = type;
+	}
 
 	@Override
 	public String toString() {
-		return klasse + "\n" + super.toString() + tekst + "\n";
+		return type + "\n" + super.toString() + tekst + "\n";
 	}
 	
 	// Metoden nedenfor er kun for valgfri oppgave 6
