@@ -9,7 +9,15 @@ import no.hvl.dat100.oppgave3.*;
 public class SkrivBlogg {
 
 	public static boolean skriv(Blogg samling, String mappe, String filnavn) {
-
-		throw new UnsupportedOperationException(TODO.method());
+		boolean skrevet = false;
+		try {
+			PrintWriter skriver = new PrintWriter(mappe + filnavn);
+			skriver.print(samling.toString());
+			skriver.close();
+			skrevet = true;
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		return skrevet;
 	}
 }
