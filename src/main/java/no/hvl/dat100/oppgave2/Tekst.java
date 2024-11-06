@@ -7,6 +7,7 @@ public class Tekst extends Innlegg {
 
 	// TODO: objektvariable 
 	private String tekst;
+	public String klasse = "TEKST";
 	
 	public Tekst () {
 		
@@ -32,7 +33,7 @@ public class Tekst extends Innlegg {
 
 	@Override
 	public String toString() {
-		return "TEKST\n" + super.toString() + tekst + "\n";
+		return klasse + "\n" + super.toString() + tekst + "\n";
 	}
 	
 	// Metoden nedenfor er kun for valgfri oppgave 6

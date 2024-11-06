@@ -6,6 +6,7 @@ public class Bilde extends Tekst {
 
 	// TODO - objekt variable
 	private String url;
+	private String klasse = "BILDE";
 	
 	public Bilde(int id, String bruker, String dato, String tekst, String url) {
 		super(id, bruker, dato, tekst);
@@ -26,8 +27,8 @@ public class Bilde extends Tekst {
 	}
 
 	@Override
-	public String toString() {
-		return "BILDE\n" + super.toString() + url + "\n";
+	public String toString() { 
+		return super.toString() + url + "\n";
 	}
 
 	// Metoden nedenfor er kun for valgfri oppgave 6
