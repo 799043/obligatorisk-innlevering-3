@@ -11,7 +11,7 @@ public class SkrivBlogg {
 	public static boolean skriv(Blogg samling, String mappe, String filnavn) {
 		boolean skrevet = false;
 		try {
-			PrintWriter skriver = new PrintWriter(mappe + filnavn);
+			PrintWriter skriver = new PrintWriter(mappe + "/" + filnavn);
 			skriver.print(samling.toString());
 			skriver.close();
 			skrevet = true;
