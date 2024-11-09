@@ -11,8 +11,11 @@ public class SkrivBlogg {
 	public static boolean skriv(Blogg samling, String mappe, String filnavn) {
 		boolean skrevet = false;
 		try {
-			PrintWriter skriver = new PrintWriter(mappe + "/" + filnavn);
-			skriver.print(samling.toString());
+			PrintWriter skriver = new PrintWriter(mappe + filnavn);
+			skriver.println(samling.getSamling());
+			for (int i = 0; i < samling.getAntall(); i++) {
+				skriver.println(samling.getSamling()[i].toString());
+			}
 			skriver.close();
 			skrevet = true;
 		} catch (FileNotFoundException e) {
